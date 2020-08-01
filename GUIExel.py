@@ -12,7 +12,6 @@ import varname
 import re
 alpha = ["C","D","E","F","G","H","I","J","K","L"]
 years = [2009,2010,2011,2012,2013,2014,2015,2016,2017,2018]
-numbers =[1,2,3,4,5,6,7,8,9,10]
 countries=[]
 variables_list = []
 variables_list2 = []
@@ -34,27 +33,6 @@ def countries_exel():
         a = sheet['A' + thing].value
         countries.append(a)
 
-def year(vari, row):
-    vari = []
-    wb = openpyxl.load_workbook('CableBrodband.xlsx')
-    sheet = wb['1'] # Get a sheet from the workbook.
-    anotherSheet = wb.active
-    for x in (alpha):
-        thing = str(x)
-        a = sheet[x + str(row)].value
-        vari.append(a)
-
-def runyear():
-    m = 0
-    for i in range(7,41):
-        varaiable = countries[m]
-        variables_list.append(varaiable)
-        year(varaiable,i)
-        m+=1
-
-
-
-
 
 countries_exel()
 
@@ -63,16 +41,8 @@ for y in range(1, len(countries)):
 
 
 
-runyear()
 
 class App(tk.Tk):
-
-
-
-
-
-
-
 
     def __init__(self):
         def makecheck(vari, num, vari2,xnum,ynum):
@@ -119,16 +89,9 @@ class App(tk.Tk):
             plt.title("Broadband Cable suscriptions by year(2009-2018)")
             plt.legend(va)
             scale_factor = 1
-
             xmin, xmax = plt.xlim()
-            ymin, ymax = plt.ylim()
-
             plt.xlim((xmin * scale_factor)+1, xmax * scale_factor)
-
-
-
             plt.show()
-
 
         selfdow_x = 780
         selfdow_y = 720
