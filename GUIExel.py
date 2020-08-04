@@ -98,7 +98,7 @@ class App(tk.Tk):
         tk.Tk.__init__(self)
         self.title("Broard Band Cable Subcriptions per Country")
         self.geometry("1080x620") #Width x Height of selfdow
-        title = tk.Label(self, text="Broard Band Cable Su   bcriptions per Country", fg="Black",font=("Courier", 24))
+        title = tk.Label(self, text="Broard Band Cable Subcriptions per Country", fg="Black",font=("Courier", 24))
         title2 = tk.Label(self, text="Pick countries to Graph", fg="Black",font=("Courier", 18))
         for y in range(1, len(countries)):
          default = StringVar()
